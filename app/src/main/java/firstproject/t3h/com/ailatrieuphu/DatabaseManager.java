@@ -30,32 +30,32 @@ public class DatabaseManager {
     public static String answer;
     public static int number = 1;
     Cursor c;
-    private static String name;
-    private static int money;
-    private static int level;
+    private String name;
+    private int money;
+    private int level;
 
-    public static String getName() {
+    public String getName() {
         return name;
     }
 
-    public static void setName(String name) {
-        DatabaseManager.name = name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public static int getMoney() {
+    public int getMoney() {
         return money;
     }
 
-    public static void setMoney(int money) {
-        DatabaseManager.money = money;
+    public void setMoney(int money) {
+        this.money = money;
     }
 
-    public static int getLevel() {
+    public int getLevel() {
         return level;
     }
 
-    public static void setLevel(int level) {
-        DatabaseManager.level = level;
+    public void setLevel(int level) {
+        this.level = level;
     }
 
     public static boolean ckeckAnswer;
@@ -303,6 +303,7 @@ public class DatabaseManager {
         }
     }
     public void getHightScore(){
+        openDB();
         c =
                 sqliteManager.rawQuery(
                         "SELECT * FROM hight_score ORDER BY level_pass DESC ", null);
@@ -316,10 +317,7 @@ public class DatabaseManager {
            money  = c.getInt(idMoney);
            level  = c.getInt(idLevelPass);
 
-            Log.d("aa", "money: " + money);
-            Log.d("aa", "level: " + level);
-            Log.d("aa", "name: " + name);
-            Log.d("aa", "number: " + number);
+           closeDB();
         }}
     public void insertHighScore(HighScore highScore){
         ContentValues contentValues = new ContentValues();
@@ -328,7 +326,7 @@ public class DatabaseManager {
         contentValues.put("level_pass",highScore.getLevelPass());
         contentValues.put("money",highScore.getMoney());
         openDB();
-getHightScore();
+
 
 
                 long index =

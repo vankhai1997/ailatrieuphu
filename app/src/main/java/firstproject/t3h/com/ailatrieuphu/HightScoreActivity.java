@@ -6,14 +6,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class HightScoreActivity extends AppCompatActivity {
-
+    DatabaseManager databaseManager;
     private TextView tvName;
     private TextView tvLevel;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hight_score);
-
+        databaseManager= new DatabaseManager(this);
 
         tvLevel = findViewById(R.id.tv_level);
         tvName = findViewById(R.id.tv_hoten);
@@ -21,9 +21,9 @@ public class HightScoreActivity extends AppCompatActivity {
     }
 
     private void init() {
-
-        tvLevel.setText(DatabaseManager.getLevel());
-        tvName.setText(DatabaseManager.getName());
+        databaseManager.getHightScore();
+        tvLevel.setText(""+databaseManager.getLevel());
+        tvName.setText(""+databaseManager.getName());
 
     }
 }
