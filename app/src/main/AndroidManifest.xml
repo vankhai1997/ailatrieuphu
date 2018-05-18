@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".Activity_Level"/>
         <activity android:name=".Activity_PlayGame"/>
+        <activity android:name=".HightScoreActivity"></activity>
     </application>
 
 </manifest>

@@ -22,12 +22,12 @@ import java.util.Random;
  * Created by LE VAN KHAI on 3/9/2018.
  */
 
-public class SimpleBar_Activity extends Dialog {
+public class SimpleBar_Dialog extends Dialog {
     private BarChart barChart;
     private int yA, yB, yC, yD;
     private Random rd;
 
-    public SimpleBar_Activity(@NonNull Context context) {
+    public SimpleBar_Dialog(@NonNull Context context) {
         super(context);
         inisView();
         inisAnswerTrue();

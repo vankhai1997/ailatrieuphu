@@ -8,12 +8,10 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,6 +39,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
     private MediaPlayer mediaClick;
     private boolean checkClick;
     public static boolean isPlay=true;
+
     public static boolean isShowDialog=false;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -344,8 +343,9 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                     }.start();
                     delay();
 //                    DatabaseManager.setNumber(level);
-
+                    Dialog_custom.level++;
                 } else {
+
                     setIsShowDialog(true);
                     MainActivity.isPlay = true;
                     DatabaseManager.number = 1;
@@ -419,8 +419,9 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                             releaseMediaFalse();
                         }
                     }.start();
-//                    DatabaseManager.setNumber(level);
+                    Dialog_custom.level++;
                 } else {
+
                     setIsShowDialog(true);
                     DatabaseManager.number = 1;
                     MainActivity.isPlay = true;
@@ -490,8 +491,9 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                         }
                     }.start();
                     delay();
-//                    DatabaseManager.setNumber(level);
+                 Dialog_custom.level++;
                 } else {
+
                     setIsShowDialog(true);
                     MainActivity.isPlay = true;
                     DatabaseManager.number = 1;
@@ -579,8 +581,10 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                     }.start();
                     delay();
 //                    DatabaseManager.setNumber(level);
-
+                    Dialog_custom.level++;
                 } else {
+
+
                     setIsShowDialog(true);
                     MainActivity.isPlay = true;
                     DatabaseManager.number = 1;
@@ -669,7 +673,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                 releaseMediaHelp();
                 mediaHelp = MediaPlayer.create(this, R.raw.khan_gia);
                 mediaHelp.start();
-                final SimpleBar_Activity simpleBar_activity = new SimpleBar_Activity(this);
+                final SimpleBar_Dialog simpleBar_dialog = new SimpleBar_Dialog(this);
                 new CountDownTimer(5000, 1000) {
 
                     @Override
@@ -679,7 +683,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
 
                     @Override
                     public void onFinish() {
-                        simpleBar_activity.show();
+                        simpleBar_dialog.show();
                     }
                 }.start();
 

@@ -1,5 +1,6 @@
 package firstproject.t3h.com.ailatrieuphu;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.res.AssetManager;
 import android.database.Cursor;
@@ -29,6 +30,33 @@ public class DatabaseManager {
     public static String answer;
     public static int number = 1;
     Cursor c;
+    private static String name;
+    private static int money;
+    private static int level;
+
+    public static String getName() {
+        return name;
+    }
+
+    public static void setName(String name) {
+        DatabaseManager.name = name;
+    }
+
+    public static int getMoney() {
+        return money;
+    }
+
+    public static void setMoney(int money) {
+        DatabaseManager.money = money;
+    }
+
+    public static int getLevel() {
+        return level;
+    }
+
+    public static void setLevel(int level) {
+        DatabaseManager.level = level;
+    }
 
     public static boolean ckeckAnswer;
     private SQLiteDatabase sqliteManager;
@@ -271,8 +299,69 @@ public class DatabaseManager {
                 c.close();
             }
             closeDB();
-            Log.d("sss", "queryFitTeen: "+questions.size());
             return questions;
         }
     }
+    public void getHightScore(){
+        c =
+                sqliteManager.rawQuery(
+                        "SELECT * FROM hight_score ORDER BY level_pass DESC ", null);
+        if (c != null) {
+            c.moveToFirst();
+            int idName = c.getColumnIndex("name");
+            int idLevelPass = c.getColumnIndex("level_pass");
+            int idMoney = c.getColumnIndex("money");
+
+           name  = c.getString(idName);
+           money  = c.getInt(idMoney);
+           level  = c.getInt(idLevelPass);
+
+            Log.d("aa", "money: " + money);
+            Log.d("aa", "level: " + level);
+            Log.d("aa", "name: " + name);
+            Log.d("aa", "number: " + number);
+        }}
+    public void insertHighScore(HighScore highScore){
+        ContentValues contentValues = new ContentValues();
+//        contentValues.put("id",highScore.getId());
+        contentValues.put("name",highScore.getName());
+        contentValues.put("level_pass",highScore.getLevelPass());
+        contentValues.put("money",highScore.getMoney());
+        openDB();
+getHightScore();
+
+
+                long index =
+                        sqliteManager.insert("hight_score", null, contentValues);
+                if ( index > 0 ) {
+            Log.d("aa", "SUCCESS!!");
+
+
+            }else {
+                Log.d("aa", "DO NOT SUCCESS!!");
+
+            }
+
+
+
+        closeDB();
+
+    }
+    public void updateHighScore(long id, int level){
+        openDB();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("level_pass", level);
+        int index =  sqliteManager.update(
+                "hight_score",
+                contentValues,
+                "id=?",
+                new String[]{id+""});
+        if ( index > 0 ) {
+
+        }else {
+
+        }
+        closeDB();
+    }
+
 }
