@@ -690,7 +690,13 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                 MainActivity.btnHelp = false;
                 ingbtnHelpX.setVisibility(View.VISIBLE);
                 break;
+            case R.id.imgstop:
+                setIsShowDialog(true);
+                checkClick=false;
+                Intent intent = new Intent(Activity_PlayGame.this,MainActivity.class);
+                startActivity(intent);
 
+                break;
             default:
                 break;
         }
@@ -784,7 +790,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
         String t;
         for (int i = 0; i < tv.size(); i++) {
             t = tv.get(i).getText().toString();
-            if (t == null) {
+            if (t == "") {
                         return;
             } else {
                 if (t.substring(2).contains(DatabaseManager.answer)) {

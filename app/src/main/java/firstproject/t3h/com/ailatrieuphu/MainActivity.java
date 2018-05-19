@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnPercent = true;
         btnStart = true;
         btnHelp = true;
+        DatabaseManager.number=1;
         if (Activity_PlayGame.isIsShowDialog()==true){
             Dialog_custom dialog_custom = new Dialog_custom(MainActivity.this);
             dialog_custom.setCancelable(false);
