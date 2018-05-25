@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-import firstproject.t3h.com.ailatrieuphu.ActivityPlayGame;
+import firstproject.t3h.com.ailatrieuphu.activity.ActivityPlayGame;
 import firstproject.t3h.com.ailatrieuphu.R;
 
 /**

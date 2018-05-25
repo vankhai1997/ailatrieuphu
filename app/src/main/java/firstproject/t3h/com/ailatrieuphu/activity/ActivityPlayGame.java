@@ -1,4 +1,4 @@
-package firstproject.t3h.com.ailatrieuphu;
+package firstproject.t3h.com.ailatrieuphu.activity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -18,6 +18,7 @@ import java.util.List;
 import java.util.Random;
 import java.util.Vector;
 
+import firstproject.t3h.com.ailatrieuphu.R;
 import firstproject.t3h.com.ailatrieuphu.database.DatabaseManager;
 import firstproject.t3h.com.ailatrieuphu.dialog.DalogCall;
 import firstproject.t3h.com.ailatrieuphu.dialog.DialogCustom;

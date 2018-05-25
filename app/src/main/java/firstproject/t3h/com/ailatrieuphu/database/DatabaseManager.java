@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import firstproject.t3h.com.ailatrieuphu.HighScore;
+import firstproject.t3h.com.ailatrieuphu.highscore.HighScore;
 import firstproject.t3h.com.ailatrieuphu.Question;
 
 /**

@@ -1,10 +1,11 @@
-package firstproject.t3h.com.ailatrieuphu;
+package firstproject.t3h.com.ailatrieuphu.highscore;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import firstproject.t3h.com.ailatrieuphu.R;
 import firstproject.t3h.com.ailatrieuphu.database.DatabaseManager;
 
 public class HightScoreActivity extends AppCompatActivity {

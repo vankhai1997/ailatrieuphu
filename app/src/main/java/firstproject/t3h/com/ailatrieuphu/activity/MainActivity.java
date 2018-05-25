@@ -1,4 +1,4 @@
-package firstproject.t3h.com.ailatrieuphu;
+package firstproject.t3h.com.ailatrieuphu.activity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import firstproject.t3h.com.ailatrieuphu.highscore.HightScoreActivity;
+import firstproject.t3h.com.ailatrieuphu.MyApplication;
+import firstproject.t3h.com.ailatrieuphu.R;
 import firstproject.t3h.com.ailatrieuphu.database.DatabaseManager;
 import firstproject.t3h.com.ailatrieuphu.dialog.DialogCustom;
 

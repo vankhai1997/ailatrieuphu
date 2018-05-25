@@ -8,7 +8,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.EditText;
 
-import firstproject.t3h.com.ailatrieuphu.HighScore;
+import firstproject.t3h.com.ailatrieuphu.highscore.HighScore;
 import firstproject.t3h.com.ailatrieuphu.R;
 import firstproject.t3h.com.ailatrieuphu.database.DatabaseManager;
 

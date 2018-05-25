@@ -1,4 +1,4 @@
-package firstproject.t3h.com.ailatrieuphu;
+package firstproject.t3h.com.ailatrieuphu.highscore;
 
 public class HighScore {
     private int id;

@@ -9,7 +9,7 @@ import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import firstproject.t3h.com.ailatrieuphu.ActivityPlayGame;
+import firstproject.t3h.com.ailatrieuphu.activity.ActivityPlayGame;
 import firstproject.t3h.com.ailatrieuphu.R;
 
 /**

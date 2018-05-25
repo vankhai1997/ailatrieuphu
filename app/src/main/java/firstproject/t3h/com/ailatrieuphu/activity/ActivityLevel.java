@@ -1,4 +1,4 @@
-package firstproject.t3h.com.ailatrieuphu;
+package firstproject.t3h.com.ailatrieuphu.activity;
 
 import android.content.Intent;
 import android.media.MediaPlayer;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import firstproject.t3h.com.ailatrieuphu.R;
 import firstproject.t3h.com.ailatrieuphu.database.DatabaseManager;
 
 /**
