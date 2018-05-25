@@ -1,11 +1,8 @@
-package firstproject.t3h.com.ailatrieuphu;
+package firstproject.t3h.com.ailatrieuphu.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.view.Window;
 
@@ -18,16 +15,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import firstproject.t3h.com.ailatrieuphu.ActivityPlayGame;
+import firstproject.t3h.com.ailatrieuphu.R;
+
 /**
  * Created by LE VAN KHAI on 3/9/2018.
  */
 
-public class SimpleBar_Dialog extends Dialog {
+public class SimpleBarDialog extends Dialog {
     private BarChart barChart;
     private int yA, yB, yC, yD;
     private Random rd;
 
-    public SimpleBar_Dialog(@NonNull Context context) {
+    public SimpleBarDialog(@NonNull Context context) {
         super(context);
         inisView();
         inisAnswerTrue();
@@ -46,7 +46,7 @@ private void random(){
 
 
     private void inisAnswerTrue() {
-        switch (Activity_PlayGame.tvTrue.substring(0, 1)) {
+        switch (ActivityPlayGame.tvTrue.substring(0, 1)) {
             case "A":
                 random();
                 yB = rd.nextInt(20);

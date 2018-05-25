@@ -1,4 +1,4 @@
-package firstproject.t3h.com.ailatrieuphu;
+package firstproject.t3h.com.ailatrieuphu.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -7,7 +7,6 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Environment;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -17,6 +16,9 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+
+import firstproject.t3h.com.ailatrieuphu.HighScore;
+import firstproject.t3h.com.ailatrieuphu.Question;
 
 /**
  * Created by LE VAN KHAI on 3/3/2018.

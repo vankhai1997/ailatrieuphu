@@ -12,32 +12,37 @@
     android:src="@drawable/background_online_blank"
     android:layout_height="match_parent" />
 
-<ImageView
-    android:id="@+id/retry"
-    android:layout_width="wrap_content"
-    android:layout_marginTop="80dp"
-    android:layout_marginLeft="85dp"
-    android:src="@drawable/atp_icon_retry"
-    android:layout_height="wrap_content" />
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/retry"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/atp_icon_retry"
+        android:layout_height="wrap_content" />
     <Button
-        android:layout_marginTop="300dp"
+       android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:text="Now play"
         android:textColor="#fff"
         android:textStyle="bold"
         android:textSize="30sp"
         android:id="@+id/btnplay"
+        android:layout_gravity="center"
         android:background="@drawable/drawable_press_play"
         android:layout_height="wrap_content" />
     <Button
-        android:layout_marginTop="400dp"
         android:layout_width="wrap_content"
         android:text="high scores"
         android:textColor="#fff"
         android:textStyle="bold"
+        android:gravity="center"
         android:textSize="30sp"
         android:id="@+id/btnhightscores"
         android:background="@drawable/drawable_press_highscores"
         android:layout_height="wrap_content" />
-
+</LinearLayout>
 </FrameLayout>

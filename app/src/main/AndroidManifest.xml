@@ -17,8 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity_Level"/>
-        <activity android:name=".Activity_PlayGame"/>
+        <activity android:name=".ActivityLevel"/>
+        <activity android:name=".ActivityPlayGame"/>
         <activity android:name=".HightScoreActivity"></activity>
     </application>
 

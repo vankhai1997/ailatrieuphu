@@ -1,4 +1,4 @@
-package firstproject.t3h.com.ailatrieuphu;
+package firstproject.t3h.com.ailatrieuphu.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -8,16 +8,20 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.EditText;
 
+import firstproject.t3h.com.ailatrieuphu.HighScore;
+import firstproject.t3h.com.ailatrieuphu.R;
+import firstproject.t3h.com.ailatrieuphu.database.DatabaseManager;
+
 /**
  * Created by LE VAN KHAI on 3/6/2018.
  */
 
-public class Dialog_custom extends Dialog implements View.OnClickListener {
+public class DialogCustom extends Dialog implements View.OnClickListener {
     private EditText edtUsername;
 private DatabaseManager databaseManager;
     Context context = getContext();
     public static int level=0;
-    public Dialog_custom(@NonNull Context context) {
+    public DialogCustom(@NonNull Context context) {
         super(context);
         inisView();
     }

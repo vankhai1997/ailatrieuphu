@@ -6,19 +6,19 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import firstproject.t3h.com.ailatrieuphu.database.DatabaseManager;
 
 /**
  * Created by LE VAN KHAI on 3/2/2018.
  */
 
-public class Activity_Level extends AppCompatActivity implements View.OnClickListener {
+public class ActivityLevel extends AppCompatActivity implements View.OnClickListener {
     private TextView tvTiepTuc;
     private TextView tvLevel1, tvLevel2, tvLevel3, tvLevel4, tvLevel5, tvLevel6, tvLevel7, tvLevel8,
             tvLevel9, tvLevel10, tvLevel11, tvLevel12, tvLevel13, tvLevel14, tvLevel15;
@@ -45,7 +45,7 @@ public class Activity_Level extends AppCompatActivity implements View.OnClickLis
                 @Override
                 public void onFinish() {
                     mdaPlayer.release();
-                    Intent intent = new Intent(Activity_Level.this, Activity_PlayGame.class);
+                    Intent intent = new Intent(ActivityLevel.this, ActivityPlayGame.class);
                     startActivity(intent);
 
                 }
@@ -60,7 +60,7 @@ public class Activity_Level extends AppCompatActivity implements View.OnClickLis
 
                 @Override
                 public void onFinish() {
-                    Intent intent = new Intent(Activity_Level.this, Activity_PlayGame.class);
+                    Intent intent = new Intent(ActivityLevel.this, ActivityPlayGame.class);
                     startActivity(intent);
 
                 }

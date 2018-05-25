@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import firstproject.t3h.com.ailatrieuphu.database.DatabaseManager;
+import firstproject.t3h.com.ailatrieuphu.dialog.DialogCustom;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, MyApplication.PostScore {
     private static final String TAG = MainActivity.class.getSimpleName();
     private Button btnPlay;
@@ -32,8 +35,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnStart = true;
         btnHelp = true;
         DatabaseManager.number=1;
-        if (Activity_PlayGame.isIsShowDialog()==true){
-            Dialog_custom dialog_custom = new Dialog_custom(MainActivity.this);
+        if (ActivityPlayGame.isIsShowDialog()==true){
+            DialogCustom dialog_custom = new DialogCustom(MainActivity.this);
             dialog_custom.setCancelable(false);
             dialog_custom.setCanceledOnTouchOutside(false);
             dialog_custom.show();
@@ -55,7 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.btnplay:
-                Intent itPlay = new Intent(MainActivity.this, Activity_Level.class);
+                Intent itPlay = new Intent(MainActivity.this, ActivityLevel.class);
                 startActivity(itPlay);
                 musicMain.release();
                 break;

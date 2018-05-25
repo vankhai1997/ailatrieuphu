@@ -18,11 +18,16 @@ import java.util.List;
 import java.util.Random;
 import java.util.Vector;
 
+import firstproject.t3h.com.ailatrieuphu.database.DatabaseManager;
+import firstproject.t3h.com.ailatrieuphu.dialog.DalogCall;
+import firstproject.t3h.com.ailatrieuphu.dialog.DialogCustom;
+import firstproject.t3h.com.ailatrieuphu.dialog.SimpleBarDialog;
+
 /**
  * Created by LE VAN KHAI on 3/3/2018.
  */
 
-public class Activity_PlayGame extends AppCompatActivity implements View.OnClickListener {
+public class ActivityPlayGame extends AppCompatActivity implements View.OnClickListener {
 
     private String selectAnswer;
     private DatabaseManager databaseManager;
@@ -223,7 +228,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
     }
 
     public static void setIsShowDialog(boolean isShowDialog) {
-        Activity_PlayGame.isShowDialog = isShowDialog;
+        ActivityPlayGame.isShowDialog = isShowDialog;
     }
     private void timerCountDown(final Context context) {
         new CountDownTimer(31000, 1000) {
@@ -239,7 +244,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                 isPlay = false;
                 if (checkClick==true){
                     tvTimer.setText("0");
-                    Intent intent = new Intent(Activity_PlayGame.this,MainActivity.class);
+                    Intent intent = new Intent(ActivityPlayGame.this,MainActivity.class);
                     startActivity(intent);
                     setIsShowDialog(true);
 
@@ -343,7 +348,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                     }.start();
                     delay();
 //                    DatabaseManager.setNumber(level);
-                    Dialog_custom.level++;
+                    DialogCustom.level++;
                 } else {
 
                     setIsShowDialog(true);
@@ -367,7 +372,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                                 @Override
                                 public void onFinish() {
 
-                                    Intent intent = new Intent(Activity_PlayGame.this, MainActivity.class);
+                                    Intent intent = new Intent(ActivityPlayGame.this, MainActivity.class);
                                     startActivity(intent);
                                 }
                             }.start();
@@ -419,7 +424,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                             releaseMediaFalse();
                         }
                     }.start();
-                    Dialog_custom.level++;
+                    DialogCustom.level++;
                 } else {
 
                     setIsShowDialog(true);
@@ -439,7 +444,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
 
                                 @Override
                                 public void onFinish() {
-                                    Intent intent = new Intent(Activity_PlayGame.this, MainActivity.class);
+                                    Intent intent = new Intent(ActivityPlayGame.this, MainActivity.class);
                                     startActivity(intent);
                                 }
                             }.start();
@@ -491,7 +496,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                         }
                     }.start();
                     delay();
-                 Dialog_custom.level++;
+                 DialogCustom.level++;
                 } else {
 
                     setIsShowDialog(true);
@@ -513,7 +518,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                                 @Override
                                 public void onFinish() {
 
-                                    Intent intent = new Intent(Activity_PlayGame.this, MainActivity.class);
+                                    Intent intent = new Intent(ActivityPlayGame.this, MainActivity.class);
                                     startActivity(intent);
                                 }
                             }.start();
@@ -581,7 +586,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                     }.start();
                     delay();
 //                    DatabaseManager.setNumber(level);
-                    Dialog_custom.level++;
+                    DialogCustom.level++;
                 } else {
 
 
@@ -603,7 +608,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                                 @Override
                                 public void onFinish() {
 
-                                    Intent intent = new Intent(Activity_PlayGame.this, MainActivity.class);
+                                    Intent intent = new Intent(ActivityPlayGame.this, MainActivity.class);
                                     startActivity(intent);
                                 }
                             }.start();
@@ -624,7 +629,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                 releaseMediaTrue();
                 mediaHelp = MediaPlayer.create(this, R.raw.help_call);
                 mediaHelp.start();
-                Activity_DalogCall dialogUser = new Activity_DalogCall(this);
+                DalogCall dialogUser = new DalogCall(this);
                 dialogUser.setCancelable(true);
                 dialogUser.setCanceledOnTouchOutside(true);
                 dialogUser.show();
@@ -673,7 +678,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
                 releaseMediaHelp();
                 mediaHelp = MediaPlayer.create(this, R.raw.khan_gia);
                 mediaHelp.start();
-                final SimpleBar_Dialog simpleBar_dialog = new SimpleBar_Dialog(this);
+                final SimpleBarDialog simpleBar_dialog = new SimpleBarDialog(this);
                 new CountDownTimer(5000, 1000) {
 
                     @Override
@@ -693,7 +698,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
             case R.id.imgstop:
                 setIsShowDialog(true);
                 checkClick=false;
-                Intent intent = new Intent(Activity_PlayGame.this,MainActivity.class);
+                Intent intent = new Intent(ActivityPlayGame.this,MainActivity.class);
                 startActivity(intent);
 
                 break;
@@ -732,7 +737,7 @@ public class Activity_PlayGame extends AppCompatActivity implements View.OnClick
 
                     @Override
                     public void onFinish() {
-                        Intent intent = new Intent(Activity_PlayGame.this, Activity_Level.class);
+                        Intent intent = new Intent(ActivityPlayGame.this, ActivityLevel.class);
                         startActivity(intent);
                     }
                 }.start();

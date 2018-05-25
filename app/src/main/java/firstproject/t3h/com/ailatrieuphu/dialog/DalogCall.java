@@ -1,24 +1,26 @@
-package firstproject.t3h.com.ailatrieuphu;
+package firstproject.t3h.com.ailatrieuphu.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
 import android.support.annotation.NonNull;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import firstproject.t3h.com.ailatrieuphu.ActivityPlayGame;
+import firstproject.t3h.com.ailatrieuphu.R;
+
 /**
  * Created by LE VAN KHAI on 3/7/2018.
  */
 
-public class Activity_DalogCall extends Dialog implements View.OnClickListener {
+public class DalogCall extends Dialog implements View.OnClickListener {
     private ImageButton   imgBtnCongVinh, imgBtnRonaldo, imgBtnSuarez;
     private TextView tvAdvice;
 
-    public Activity_DalogCall(@NonNull Context context) {
+    public DalogCall(@NonNull Context context) {
         super(context);
         inisView();
     }
@@ -45,15 +47,15 @@ public class Activity_DalogCall extends Dialog implements View.OnClickListener {
         switch (view.getId()) {
 
             case R.id.suarez:
-                tvAdvice.setText("Suarez khuyên bạn chọn đáp án " + Activity_PlayGame.tvTrue.substring(0, 1));
+                tvAdvice.setText("Suarez khuyên bạn chọn đáp án " + ActivityPlayGame.tvTrue.substring(0, 1));
                 break;
             case R.id.congvinh:
 
-                tvAdvice.setText("Công Vinh khuyên bạn chọn đáp án " + Activity_PlayGame.tvTrue.substring(0, 1));
+                tvAdvice.setText("Công Vinh khuyên bạn chọn đáp án " + ActivityPlayGame.tvTrue.substring(0, 1));
                 break;
 
             case R.id.imgronaldo:
-                tvAdvice.setText("Ronaldo khuyên bạn chọn đáp án " + Activity_PlayGame.tvTrue.substring(0, 1));
+                tvAdvice.setText("Ronaldo khuyên bạn chọn đáp án " + ActivityPlayGame.tvTrue.substring(0, 1));
                 break;
 
             default:
